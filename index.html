@@ -231,7 +231,7 @@ body{background:var(--page);display:flex;align-items:center;justify-content:cent
   pg.addEventListener('scroll',function(){var m=pg.scrollHeight-pg.clientHeight;$('prog').style.width=(m>0?pg.scrollTop/m*100:0)+'%'});
   $('top').addEventListener('click',function(){pg.scrollTo({top:0,behavior:'smooth'})});
   /* share: auto copy */
-  var sh=$('share'),URL_='https://claude.ai/artifact/XjH4gpiYhnCrZmaVSMQq4Y';
+  var sh=$('share'),URL_='https://jushanweddinginvitation.netlify.app/';
   function copy(t){return new Promise(function(ok,no){function fb(){try{var x=document.createElement('textarea');x.value=t;x.setAttribute('readonly','');x.style.cssText='position:fixed;opacity:0;top:0';document.body.appendChild(x);x.select();x.setSelectionRange(0,t.length);var r=document.execCommand('copy');x.remove();r?ok():no();}catch(e){no();}}
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fb);}else fb();});}
   sh.addEventListener('click',function(){copy(URL_).then(function(){sh.textContent='Link copied ✓'},function(){sh.textContent='Copy the page link'});setTimeout(function(){sh.textContent='Share invitation'},2600);});
